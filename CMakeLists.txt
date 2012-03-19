@@ -633,6 +633,12 @@ INSTALL(
                               WORLD_READ WORLD_EXECUTE
   )
 
+# Install bash-completion scripts
+FIND_PACKAGE (Bash-Completion 2.0)
+IF (BASH_COMPLETION_FOUND)
+  ADD_SUBDIRECTORY (Bash-Completion)
+ENDIF (BASH_COMPLETION_FOUND)
+
 #-----------------------------------------------------------------------
 # End of the main section of the CMakeLists file
 #-----------------------------------------------------------------------
